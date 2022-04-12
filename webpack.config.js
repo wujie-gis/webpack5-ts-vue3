@@ -1,5 +1,8 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+
 module.exports = {
-//   mode: "development",
+  //   mode: "development",
   entry: "./src/index.ts",
   module: {
     rules: [
@@ -10,4 +13,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "webpack5-ts-vue3",
+      template: "./index.html",
+    }),
+  ],
 };
