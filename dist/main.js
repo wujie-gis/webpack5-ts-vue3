@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  console.log("和光不同尘"),
+  console.log("22"),
     [1, 2, 3].forEach((o) => {
       console.log(o);
     });
