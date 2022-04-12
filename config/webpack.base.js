@@ -14,11 +14,28 @@ module.exports = {
             cacheDirectory: true,
           },
         },
-
       },
       {
         test: /\.vue$/,
         use: "vue-loader",
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        type: "asset",
+        generator: {
+          filename: "images/[name]-[hash][ext]",
+        },
+      },
+      {
+        test: /\.(eot|svg|ttf|woff2?|)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name]-[hash][ext]",
+        },
       },
     ],
   },
