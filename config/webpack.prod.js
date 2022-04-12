@@ -11,10 +11,10 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    // new CopyWebpackPlugin({
-    //   // from后的路径是相对于项目的根目录，to后的路径是相对于打包后的dist目录
-    //   patterns: [{ from: "./public", to: "./public" }],
-    // }),
+    new CopyWebpackPlugin({
+      // from后的路径是相对于项目的根目录，to后的路径是相对于打包后的dist目录
+      patterns: [{ from: "./public", to: "./public" }],
+    }),
     new BundleAnalyzerPlugin({
       analyzerMode: "disabled",
       generateStatsFile: true,
